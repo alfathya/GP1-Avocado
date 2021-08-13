@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/snow.jpg);
+  background-size: 86rem;
+}
+
+.countiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  min-height: 100vh;
+
+}
+/* main page */
+
+.main-page {
+  position: relative;
+  left: 50px;
+  display: flex;
+  color: white;
+  align-items: flex-end;
+  bottom: 50px;
+}
+
+.list-main{
+    font-size: 20px;
+}
+
