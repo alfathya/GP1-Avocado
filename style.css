@@ -15,7 +15,6 @@ body {
   align-items: stretch;
   flex-direction: row;
   min-height: 100vh;
-
 }
 /* main page */
 
@@ -28,7 +27,6 @@ body {
   bottom: 50px;
 }
 
-.list-main{
-    font-size: 20px;
+.time {
+  font-size: 20px;
 }
-
