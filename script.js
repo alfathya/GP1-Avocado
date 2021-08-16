@@ -65,8 +65,8 @@ const getTime = () => {
     AmPm = "AM";
   }
 
-  if (hour < 10) hour = `0${hour}`;
-  if (minute < 10) hour = `0${minute}`;
+  // if (hour < 10) hour = `0${hour}`;
+  // if (minute < 10) hour = `0${minute}`;
 
   let hours = document.getElementById("hours");
   hours.innerHTML = hour;
