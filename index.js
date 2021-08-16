@@ -10,7 +10,7 @@ const dateToday = () => {
   if (dd < 10) dd = `0${dd}`
   if (mm < 10) mm = `0${mm}`
 
-  today = `${day} ${dd} ${mm} ${yyyy}`
+  today = `${day}, ${dd} ${mm} ${yyyy}`
 
   return today
 }
