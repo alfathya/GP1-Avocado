@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,7 @@
 }
 
 body {
+  
   background: url(/snow.jpg);
   background-size: 86rem;
 }
@@ -79,17 +82,18 @@ body {
   color: white;
   position: relative;
   left: 32%;
-  bottom: 19px;
+  bottom: 49px;
   height: 10%;
 }
 /* status */
-.fas {
-  position: relative;
-  bottom: 30px;
+.icon{
+ width: 15rem;
+ position: relative;
+ bottom: 44px;
 }
 .statusText {
   position: relative;
-  left: 35px;
+  left: 85px;
   bottom: 10px;
 }
 
@@ -110,4 +114,11 @@ body {
   margin-top: 10%;
   margin-left: 150px;
   list-style: none;
+}
+
+
+@media (max-width: 600px){
+  .countiner{
+    display: flex;
+  }
 }
