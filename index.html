@@ -5,58 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/dabea04def.js" crossorigin="anonymous"></script>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
-    <title>Document</title>
+    <title>weather web</title>
   </head>
   <body>
-    <div class="countiner">
-      <div class="main-page">
-        <div class="list-city">
-          <span class="name-city">jakarta</span>
-        <div class="time">
-          <span id="hour">00</span> :
-          <span id="minutes">00</span>
-          <span id="periode">AM</span>
-          <div class="date" id="date">
-            <span id="dayname">senin</span>
-            <span id="months"> agustus</span>
+    <div class="card h-screen w-screen flex justify-between items-stretch flex-row">
+      <!-- ini info pada main -->
+      <div class="main-page w-full h-full flex flex-row justify-between items-end pl-16 pb-10">
+        <div class="list-city flex flex-col text-white">
+          <!-- tempat dan waktu -->
+          <span class="name-city text-5xl ">---</span>
+          <div class="time text-6xl">
+            <span id="hour">00</span> :
+            <span id="minutes">00</span>
+            <span id="periode">AM</span>
+          </div>
+          <!-- hari dan tanggal -->
+          <div class="date text-4xl" id="date">
+            <span id="dayname">Monday</span>
+            <span id="date">16</span>
+            <span id="months">August</span>
             <span id="year">2021</span>
           </div>
         </div>
-        </div>
       </div>
-      <!-- <div class="city">
-        <div class="list-city">
-          <span class="name-city">jakarta</span>
-        </div>
-      </div> -->
-      <!-- ini sidebar -->
-      <div class="sidebar">
-        <input class="search" id="search" type="text" name="" placeholder="Search your city here" />
-        <button type="submit" class="search-btn">
+
+      <!-- ini side bar  -->
+
+      <div class="sidebar w-4/12 pt-8 h-screen flex justify-start rounded-sm flex-col items-center">
+        <input class="search w-3/4 pb-3 outline-none" id="search" type="text" name="" placeholder="Search your city here" />
+        <button type="submit" class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer">
           <i class="fas fa-search"></i>
         </button>
+
         <!-- ini side bar status cuaca -->
-        <div class="status">
-          <i class="	fas fa-snowflake fa-10x"></i>
-          <h2 class="statusText">SNOW</h2>
+
+        <div class="status w-full h-3/6 text-center">
+          <h1 class="derajat mt-10 text-6xl font-bold">0ºC</h1>
+          <svg data-v-3e6e9f12=""class="owm-weather-icon"></svg>
+          <h2 class="statusText mt-10 text-6xl font-bold">--</h2>
         </div>
-        <div class="infocuaca">
-          
+
+        <!-- ini sidebar info cuaca -->
+
+        <div class="infocuaca flex text-xl pt-8">
           <ul class="info">
-            <li class="temperature">Temperature</li>
+            <!-- <li class="temperature">Temperature</li> -->
             <li class="humadity">Humadity</li>
             <li class="wind">Wind Speed</li>
             <li class="visibility">visibility</li>
+            <li class="pressure">pressure</li>
           </ul>
           <ul class="info2">
-            <li class="derajat">0ºC</li>
+            <!-- <li class="derajat">0ºC</li> -->
             <li class="kelembapan">0%</li>
             <li class="angin">0km/h</li>
             <li class="jarakpandang">0km</li>
+            <li class="tekanan">0hPa</li>
           </ul>
-          
         </div>
+
+      </div>
+
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
