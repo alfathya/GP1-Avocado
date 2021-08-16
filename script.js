@@ -29,8 +29,6 @@ const dateToday = () => {
   let mm = months[today.getMonth()];
   let yyyy = today.getFullYear();
 
- 
-
   if (dd < 10) dd = `0${dd}`;
   if (mm < 10) mm = `0${mm}`;
 
@@ -48,10 +46,7 @@ const dateToday = () => {
 
   return today;
 };
-
 var Interval = setInterval(dateToday);
-
-
 const getTime = () => {
   let time = "";
   let today = new Date();
@@ -68,6 +63,7 @@ const getTime = () => {
   // if (hour < 10) hour = `0${hour}`;
   // if (minute < 10) hour = `0${minute}`;
 
+ 
   let hours = document.getElementById("hours");
   hours.innerHTML = hour;
   let minutes = document.getElementById("minutes");
@@ -78,3 +74,5 @@ const getTime = () => {
   return (time = `${hour} : ${minute} ${AmPm}`);
 };
 var test = setInterval(getTime);
+// console.log(dateToday());
+// console.log(getTime());
