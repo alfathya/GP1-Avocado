@@ -9,8 +9,8 @@ const searchButton = document.querySelector(".search-btn")
 searchButton.addEventListener('click', async () => {
   const inputCity = document.querySelector('.search')
   const weather = await getWeather(inputCity.value)
-
-  document.querySelector('.derajat').innerHTML = `${weather.main.temp}`
+ const suhu  = weather.main.temp - 273.15
+  document.querySelector('.derajat').innerHTML = `${suhu}`
   document.querySelector('.kelembapan').innerHTML = `${weather.main.humidity}%`
   document.querySelector('.angin').innerHTML = `${weather.wind.speed}km/h`
   document.querySelector('.jarakpandang').innerHTML = `${weather.visibility}km`
