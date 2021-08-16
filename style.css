@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -108,3 +109,118 @@
     }
   }
   
+=======
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: url(/snow.jpg);
+  background-size: 86rem;
+}
+
+.countiner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+/* main page */
+
+.main-page {
+  position: relative;
+  left: 50px;
+  display: flex;
+  color: white;
+  align-items: flex-end;
+  bottom: 50px;
+}
+
+.time {
+  font-size: 20px;
+}
+
+.sidebar {
+  padding-top: 2%;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  width: 20rem;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* city */
+
+
+.name-city{
+  color: white;
+  font-size: 20px;
+  position: relative;
+  left: 3px;
+} 
+
+/* ini search kolom */
+.search {
+  border: none;
+  width: 80%;
+  background: none;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  outline: none;
+  color: white;
+  padding-bottom: 3%;
+}
+::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  position: relative;
+  left: 24%;
+}
+
+.search-btn {
+  background: none;
+  border: none;
+  color: white;
+  position: relative;
+  left: 32%;
+  bottom: 19px;
+  height: 10%;
+}
+/* status */
+.fas {
+  position: relative;
+  bottom: 30px;
+}
+.statusText {
+  position: relative;
+  left: 35px;
+  bottom: 10px;
+}
+
+/* ini sidebar info */
+.sidebar .infocuaca {
+  display: flex;
+  font-size: 18px;
+  color: #e9e9e9;
+  border-top: 3px solid rgba(255, 255, 255, 0.3);
+  padding-top: 10%;
+}
+
+.sidebar .info li {
+  margin-top: 20%;
+  list-style: none;
+}
+.sidebar .info2 li {
+  margin-top: 10%;
+  margin-left: 150px;
+  list-style: none;
+}
+>>>>>>> 951a594bce184f5b20c6f844971d024aea742595
