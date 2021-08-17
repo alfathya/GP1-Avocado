@@ -39,28 +39,56 @@
   left: 20%;
 }
 
+
+
 .search-btn {
   color: white;
   left: 70%;
 }
 /* ini sidebar info */
-.sidebar .infocuaca {
-  color: #e9e9e9;
-  border-top: 3px solid rgba(255, 255, 255, 0.3);
+
+
+.border{
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  height: 3px;
+  width: 15rem;
 }
 
-.sidebar .info li {
-  margin-top: 20%;
-  list-style: none;
-}
-.sidebar .info2 li {
-  margin-top: 10%;
-  margin-left: 150px;
-  list-style: none;
+.derajat{
+  position: relative;
+  bottom: 25px;
 }
 
+.info{
+  position: relative;
+  right: 2rem;
+}
+
+.info2{
+  position: relative;
+  left: 2rem;
+}
 /* disini atur responsive nya */
-@media (max-width: 600px) {
+@media (min-height: 600px) {
+  .status {
+    position: relative;
+    top: 10px;
+  }
+}
+/* @media (max-height: 600px){
+  .status{
+    position: relative;
+    bottom: 5px;
+  }
+  .derajat{
+    position: relative;
+    top: 20px;
+  }
+  
+} */
+
+/* @media (max-width: 600px) {
   .card {
     position: relative;
     width: auto;
@@ -79,4 +107,4 @@
     left: 33%;
     bottom: 24px;
   }
-}
+} */
