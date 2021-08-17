@@ -1,8 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Rokkitt", serif;
+  font-family: "Khula", sans-serif;
 }
 /* ini card body */
 .card {
@@ -12,7 +14,7 @@
 }
 .waktu,
 .tanggal {
-  color: #e9e9e9;
+  color: rgb(207, 205, 205);
 }
 /* ini suhu dan nama kota */
 
@@ -32,79 +34,191 @@
 .search {
   background: none;
   border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  transition: ease-out 0.3s;
 }
 ::-webkit-input-placeholder {
   color: rgba(255, 255, 255, 0.8);
   position: relative;
-  left: 20%;
+  left: 2rem;
+  transition: ease-out 0.3s;
 }
-
-
 
 .search-btn {
   color: white;
-  left: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  left: 5rem;
+  bottom: 35px;
+}
+
+.search-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
 }
 /* ini sidebar info */
 
-
-.border{
+.border {
   background: rgba(255, 255, 255, 0.3);
   border: none;
   height: 3px;
   width: 15rem;
 }
 
-.derajat{
+.derajat {
   position: relative;
   bottom: 25px;
 }
 
-.info{
+.infocuaca {
   position: relative;
-  right: 2rem;
+  top: 30px;
+  color: rgba(255, 255, 255, 0.8);
 }
 
-.info2{
+.info {
+  position: relative;
+  right: 2rem;
+  transition: ease-in;
+}
+
+.info2 {
   position: relative;
   left: 2rem;
 }
 /* disini atur responsive nya */
-@media (min-height: 600px) {
+/* @media (min-height: 600px) {
   .status {
     position: relative;
     top: 10px;
   }
-}
-/* @media (max-height: 600px){
-  .status{
-    position: relative;
-    bottom: 5px;
-  }
-  .derajat{
-    position: relative;
-    top: 20px;
-  }
-  
 } */
 
-/* @media (max-width: 600px) {
+
+@media (max-width: 828px) {
+  .search {
+    width: 12rem;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  }
+  .search-btn {
+    position: relative;
+    bottom: 40px;
+    transition: ease-in-out;
+  }
+
+  ::-webkit-input-placeholder {
+    font-size: 12px;
+    position: relative;
+    left: 2.2rem;
+  }
+  .info {
+    font-size: 13px;
+  }
+
+  .info2 {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .derajat {
+    position: relative;
+    bottom: 50px;
+  }
+  .time {
+    position: relative;
+    right: 2px;
+  }
+  .info {
+    font-size: 12px;
+  }
+
+  .info2 {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 625px) {
   .card {
     position: relative;
     width: auto;
-    min-height: 70vh;
+    min-height: 75vh;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    overflow: scroll;
   }
   .sidebar {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
+    position: relative;
+    top: 71%;
+    backdrop-filter: blur(0px);
+    background: rgba(0, 0, 0, 0.3);
+  }
+  .border {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    height: 3px;
+    width: 12rem;
   }
   .search-btn {
+    width: 0;
     position: relative;
-    left: 33%;
-    bottom: 24px;
+    left: 6rem;
   }
-} */
+  .infocuaca{
+    padding-bottom: 20px;
+  }
+  .info{
+    position: relative;
+    bottom: 20px;
+  }
+  .info2{
+    position: relative;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 425px) {
+  .main-page {
+   display: flex;
+   align-items: center;
+   margin-left: -50px;
+  }
+  .time {
+    font-size: 15px;
+  }
+  .date {
+    font-size: 14px;
+  }
+  .name-city{
+    font-size: 15px;
+  }
+  .border{
+    width: 12rem;
+  }
+}
+
+
+@media (max-height:570px){
+  .main-page{
+    margin-top: 2rem;
+  }
+  .time {
+    font-size: 15px;
+  }
+  .date {
+    font-size: 14px;
+  }
+  .name-city{
+    font-size: 15px;
+  }
+  .sidebar{
+    margin-top: -1rem;
+  }
+}
