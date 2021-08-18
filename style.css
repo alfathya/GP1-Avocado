@@ -19,10 +19,10 @@
 /* ini suhu dan nama kota */
 
 .city .citysuhu {
-  color:  rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 .city .cityname {
-  color:  rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 /* ini sidebar */
 .sidebar {
@@ -69,10 +69,10 @@
 .derajat {
   position: relative;
   bottom: 25px;
-  color : rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
-.statusText{
-  color : rgba(255, 255, 255, 0.8);
+.statusText {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .infocuaca {
@@ -91,6 +91,31 @@
   position: relative;
   left: 2rem;
 }
+
+.card2 {
+  display: flex;
+  justify-content: space-between;
+  width: 38rem;
+}
+
+.forecast {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  min-height: 20vh;
+  width: 6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 3px;
+  position: relative;
+  top: 30px;
+}
+.card3{
+  opacity: 0;
+  position: relative;
+  bottom: 50rem;
+}
 /* disini atur responsive nya */
 /* @media (min-height: 600px) {
   .status {
@@ -99,7 +124,11 @@
   }
 } */
 
-
+@media (max-width: 984px) {
+  .card2 {
+    width: 29rem;
+  }
+}
 @media (max-width: 828px) {
   .search {
     width: 12rem;
@@ -143,10 +172,10 @@
   }
   .border {
     width: 10rem;
-  };
+  }
 }
 
-@media (max-width: 625px) {
+@media (max-width: 768px) {
   .card {
     overflow: scroll;
   }
@@ -166,24 +195,75 @@
     left: 6rem;
     bottom: 30px;
   }
-  .infocuaca{
+  .infocuaca {
     padding-bottom: 20px;
   }
-  .info{
+  .info {
     position: relative;
     bottom: 20px;
   }
-  .info2{
+  .info2 {
     position: relative;
     bottom: 20px;
+  }
+  .card2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    border-radius: 3px;
+    width: 23rem;
+    position: relative;
+    top: 20px;
+  }
+  .forecast {
+    display: flex;
+    width: 23rem;
+    height: 4rem;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    min-height: 10vh;
+    backdrop-filter: blur(0px);
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    right: 20px;
+  }
+  .card3{
+    opacity: 0;
+    position: relative;
+    bottom: 50rem;
   }
 }
-
+@media (max-width: 640px) {
+  .card2 {
+    opacity: 0;
+    display: flex;
+    position: relative;
+    width: 100%;
+    right: 0px;
+  }
+  .card3 {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    bottom: 25px;
+    padding: 0;
+    opacity: 1;
+  }
+  .forecast {
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    width: 20rem;
+    position: relative;
+    right: 0;
+  }
+}
 @media (max-width: 425px) {
   .main-page {
-   display: flex;
-   align-items: center;
-   margin-left: -50px;
+    display: flex;
+    align-items: center;
+    margin-left: -50px;
   }
   .time {
     font-size: 15px;
@@ -191,17 +271,17 @@
   .date {
     font-size: 14px;
   }
-  .name-city{
+  .name-city {
     font-size: 15px;
   }
-  .border{
+  .border {
     width: 12rem;
   }
+
 }
 
-
-@media (max-height:570px){
-  .main-page{
+@media (max-height: 570px) {
+  .main-page {
     margin-top: 2rem;
   }
   .time {
@@ -210,10 +290,10 @@
   .date {
     font-size: 14px;
   }
-  .name-city{
+  .name-city {
     font-size: 15px;
   }
-  .sidebar{
+  .sidebar {
     margin-top: -1rem;
   }
 }
