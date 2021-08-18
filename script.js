@@ -33,6 +33,29 @@ searchButton.addEventListener("click", async () => {
     ).innerHTML = `${weather.main.pressure}hPa`;
     document.querySelector("#icon").src =
       "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png";
+
+    var card = document.getElementById("card");
+    if (weather.weather[0].main === "Clouds") {
+      card.style.backgroundImage = "url('/image/cloud.jpg')";
+    } else if (weather.weather[0].main === "Clear") {
+      card.style.backgroundImage = "url('/image/clear.jpg')";
+    } else if (weather.weather[0].main === "Sunny") {
+      card.style.backgroundImage = "url('/image/sunny.jpg')";
+    } else if (weather.weather[0].main === "Rain") {
+      card.style.backgroundImage = "url('/image/rain.jpg')";
+    } else if (weather.weather[0].main === "Thunderstrom") {
+      card.style.backgroundImage = "url('/image/thunderstrom.jpg')";
+    } else if (weather.weather[0].main === "Mist") {
+      card.style.backgroundImage = "url('/image/mist.jpg')";
+    } else if (weather.weather[0].main === "Haze") {
+      card.style.backgroundImage = "url('/image/haze.jpg')";
+    } else if (weather.weather[0].main === "Sand") {
+      card.style.backgroundImage = "url('/image/sand.jpg')";
+    } else if (weather.weather[0].main === "Snow") {
+      card.style.backgroundImage = "url('/image/snow.jpg')";
+    } else {
+      card.style.backgroundImage = "url('/image/default.jpg')";
+    }
     inputCity.value = "";
 
     const file = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,alerts&appid=023831ae929ef5ca05e8f9764c820c2e`;
@@ -121,13 +144,11 @@ const dateToday = () => {
   return today;
 };
 var Interval = setInterval(dateToday);
-
 const getTime = () => {
   let time = "";
   let today = new Date();
   let hour = today.getHours();
   let minute = today.getMinutes();
-  let second = today.getSeconds();
   let AmPm = "";
 
   if (hour >= 12) {
@@ -136,19 +157,16 @@ const getTime = () => {
     AmPm = "AM";
   }
 
-  if (hour < 10) hour = `0${hour}`;
-  if (minute < 10) minute = `0${minute}`;
-  if (second < 10) second = `0${second}`;
+  // if (hour < 10) hour = `0${hour}`;
+  // if (minute < 10) hour = `0${minute}`;
 
   let hours = document.getElementById("hours");
   hours.innerHTML = hour;
   let minutes = document.getElementById("minutes");
   minutes.innerHTML = minute;
-  let seconds = document.getElementById("seconds");
-  seconds.innerHTML = second;
   let periode = document.getElementById("periode");
   periode.innerHTML = AmPm;
 
-  return (time = `${hour} : ${minute} : ${second} ${AmPm}`);
+  return (time = `${hour} : ${minute} ${AmPm}`);
 };
 var test = setInterval(getTime);
