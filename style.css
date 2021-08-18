@@ -12,6 +12,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+.forecast{
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
 /* ini sidebar */
 .sidebar {
   background: rgba(0, 0, 0, 0.1);
