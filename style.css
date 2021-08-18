@@ -8,11 +8,7 @@
 }
 /* ini card body */
 .card {
-<<<<<<< HEAD
-  /* background: url("/image/snow.jpg"); */
-=======
-  background: url("/image/eberhard-grossgasteiger-iY5L2wQHVjA-unsplash.jpg");
->>>>>>> 5b703ea277a5212009d13c8a29961942932249a9
+  background: url("/image/default.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
