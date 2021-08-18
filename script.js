@@ -9,8 +9,12 @@ const getWeather = (city) => {
 const searchButton = document.querySelector(".search-btn");
 searchButton.addEventListener("click", async () => {
   const inputCity = document.querySelector(".search");
+  if (!inputCity.value.length) alert("Masukkan nama kota");
   const weather = await getWeather(inputCity.value);
   const suhu = Math.round(weather.main.temp - 273.15);
+
+  if (inputCity.value !== weather.name)
+    alert("kota yang anda masukkan tidak terdaftar");
 
   document.querySelector(".derajat").innerHTML = `${suhu} &#8451`;
   document.querySelector(".kelembapan").innerHTML = `${weather.main.humidity}%`;
@@ -59,11 +63,22 @@ const dateToday = () => {
   if (dd < 10) dd = `0${dd}`;
   if (mm < 10) mm = `0${mm}`;
 
+  let dayName = document.getElementById("dayname");
+  let date = document.getElementById("date");
+  let month = document.getElementById("months");
+  let year = document.getElementById("year");
+
+  dayName.innerHTML = day;
+  date.innerHTML = dd;
+  month.innerHTML = mm;
+  year.innerHTML = yyyy;
+
   today = `${day} ${dd} ${mm} ${yyyy}`;
 
   return today;
 };
 
+var Interval = setInterval(dateToday);
 const getTime = () => {
   let time = "";
   let today = new Date();
@@ -80,8 +95,13 @@ const getTime = () => {
   if (hour < 10) hour = `0${hour}`;
   if (minute < 10) minute = `0${minute}`;
 
+  let hours = document.getElementById("hours");
+  hours.innerHTML = hour;
+  let minutes = document.getElementById("minutes");
+  minutes.innerHTML = minute;
+  let periode = document.getElementById("periode");
+  periode.innerHTML = AmPm;
+
   return (time = `${hour} : ${minute} ${AmPm}`);
 };
-
-console.log(dateToday());
-console.log(getTime());
+var test = setInterval(getTime);
