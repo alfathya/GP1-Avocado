@@ -4,22 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://kit.fontawesome.com/dabea04def.js" crossorigin="anonymous"></script>
-    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/dabea04def.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>weather web</title>
   </head>
   <body>
-    <div class="card h-screen w-screen flex justify-between items-stretch flex-row">
-      <div class="main-page w-full h-full flex justify-center flex-col ">
+    <div
+      class="card h-screen w-screen flex justify-between items-stretch flex-row"
+    >
+      <div class="main-page w-full h-full flex justify-center flex-col">
         <!-- ini info pada main -->
-        <div class=" w-full h-3/5 flex flex-row justify-between items-end pl-16 pb-10">
+        <div
+          class="
+            w-full
+            h-3/5
+            flex flex-row
+            justify-between
+            items-end
+            pl-16
+            pb-10
+          "
+        >
           <div class="list-city flex flex-col text-white">
             <!-- tempat dan waktu -->
-            <span class="name-city text-5xl ">---</span>
+            <span class="name-city text-5xl">---</span>
             <div class="time text-6xl">
-              <span id="hours"></span> :
-              <span id="minutes"></span>
+              <span id="hours"></span> : <span id="minutes"></span> :
+              <span id="seconds"></span>
               <span id="periode"></span>
             </div>
             <!-- hari dan tanggal -->
@@ -31,53 +49,91 @@
             </div>
           </div>
         </div>
-        <div class="forecast-info h-2/6 w-full rounded-2xl flex justify-around text-white">
-          <div class="forecast w-1/6 h-full flex flex-col items-center ">
-            <h3 id="timeNow " class="m-5 text-2xl border-b-4 pb-3 ">Mon</h3>
-            <h4 id="day1" class=" text-5xl mb-5">0ºC</h4>
+        <div
+          class="
+            forecast-info
+            h-2/6
+            w-full
+            rounded-2xl
+            flex
+            justify-around
+            text-white
+          "
+        >
+          <div class="forecast w-1/6 h-full flex flex-col items-center">
+            <h3 id="timeNow " class="m-5 text-2xl border-b-4 pb-3">Mon</h3>
+            <h4 id="day1" class="text-5xl mb-5">0ºC</h4>
             <h5 id="status1" class="statusForecast text-2xl">--</h5>
           </div>
-          <div class="forecast w-1/6 h-full flex flex-col items-center  ">
-            <h3 id="time1" class="m-5  text-2xl border-b-4 pb-3 ">Tue</h3>
+          <div class="forecast w-1/6 h-full flex flex-col items-center">
+            <h3 id="time1" class="m-5 text-2xl border-b-4 pb-3">Tue</h3>
             <h4 id="day2" class="text-5xl mb-5">0ºC</h4>
-            <h5 id="status2" class=" text-2xl">--</h5>
+            <h5 id="status2" class="text-2xl">--</h5>
           </div>
-          <div class="forecast w-1/6 h-full flex flex-col items-center ">
-            <h3 id="time2" class="m-5  text-2xl border-b-4 pb-3 ">Wed</h3>
+          <div class="forecast w-1/6 h-full flex flex-col items-center">
+            <h3 id="time2" class="m-5 text-2xl border-b-4 pb-3">Wed</h3>
             <h4 id="day3" class="text-5xl mb-5">0ºC</h4>
             <h5 id="status3" class="statusForecast text-2xl">--</h5>
           </div>
-          <div class="forecast w-1/6 h-full flex flex-col items-center ">
-            <h3 id="time3" class="m-5  text-2xl border-b-4 pb-3 ">Thu</h3>
-            <h4 id="day4" class=" text-5xl mb-5">0ºC</h4>
+          <div class="forecast w-1/6 h-full flex flex-col items-center">
+            <h3 id="time3" class="m-5 text-2xl border-b-4 pb-3">Thu</h3>
+            <h4 id="day4" class="text-5xl mb-5">0ºC</h4>
             <h5 id="status4" class="statusForecast text-2xl">--</h5>
           </div>
-          <div class="forecast w-1/6 h-full flex flex-col items-center ">
-            <h3 id="time4" class=" m-5  text-2xl border-b-4 pb-3 ">Fri</h3>
-            <h4 id="day5" class=" text-5xl mb-5">0ºC</h4>
+          <div class="forecast w-1/6 h-full flex flex-col items-center">
+            <h3 id="time4" class="m-5 text-2xl border-b-4 pb-3">Fri</h3>
+            <h4 id="day5" class="text-5xl mb-5">0ºC</h4>
             <h5 id="status5" class="statusForecast text-2xl">--</h5>
           </div>
         </div>
       </div>
-   
 
       <!-- ini side bar  -->
 
-      <div class="sidebar w-4/12 pt-8 h-screen flex justify-start rounded-sm flex-col items-center">
-        <input class="search w-3/4 pb-3 outline-none" id="search" type="text" name="" placeholder="Search your city here" />
-        <button type="submit" class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer">
+      <div
+        class="
+          sidebar
+          w-4/12
+          pt-8
+          h-screen
+          flex
+          justify-start
+          rounded-sm
+          flex-col
+          items-center
+        "
+      >
+        <input
+          class="search w-3/4 pb-3 outline-none"
+          id="search"
+          type="text"
+          name=""
+          placeholder="Search your city here"
+        />
+        <button
+          type="submit"
+          class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer"
+        >
           <i class="fas fa-search"></i>
         </button>
 
         <!-- ini side bar status cuaca -->
 
-        <div class="status w-full h-3/6 text-center flex flex-col justify-center items-center">
-          <h1 class=" derajat mt-5 text-6xl font-bold">0ºC</h1>
-          <svg class="w-1/2 h-1/2 p-5 " src="" id="icon" alt="Icon"></svg>
+        <div
+          class="
+            status
+            w-full
+            h-3/6
+            text-center
+            flex flex-col
+            justify-center
+            items-center
+          "
+        >
+          <h1 class="derajat mt-5 text-6xl font-bold">0ºC</h1>
+          <svg class="w-1/2 h-1/2 p-5" src="" id="icon" alt="Icon"></svg>
           <h2 class="statusText text-6xl font-bold">--</h2>
         </div>
-        
-
 
         <!-- ini sidebar info cuaca -->
 
@@ -101,5 +157,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="default.js"></script>
   </body>
 </html>
