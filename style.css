@@ -6,7 +6,7 @@
 }
 /* ini card body */
 .card {
-  background: url("/image/snow.jpg");
+  /* background: url("/image/snow.jpg"); */
   background-repeat: no-repeat;
   background-size: cover;
 }
