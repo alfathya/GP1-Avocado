@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <script src="https://kit.fontawesome.com/dabea04def.js" crossorigin="anonymous"></script>
     <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" /> -->
     <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
@@ -11,7 +12,7 @@
     <title>weather web</title>
   </head>
   <body>
-    <div class="card h-screen w-screen flex justify-between items-stretch flex-row">
+    <div class="card h-screen h-full flex flex-col justify-between items-center sm:h-screen sm:w-screen sm:flex sm:justify-between sm:items-stretch sm:flex-row">
       <!-- ini info pada main -->
       <div class="main-page w-full h-full flex flex-row justify-between items-end pl-16 pb-10">
         <div class="list-city flex flex-col text-white">
@@ -31,12 +32,9 @@
           </div>
         </div>
       </div>
-      <div class="null">
-      
-      </div>
       <!-- ini side bar  -->
 
-      <div class="sidebar w-4/12 pt-8 h-screen flex justify-start rounded-sm flex-col items-center">
+      <div class="sidebar relative top-3/4 h-screen w-full flex flex-col items-center sm:relative sm:top-0 sm:w-4/12 sm:pt-8 sm:h-screen sm:flex sm:justify-start sm:rounded-sm sm:flex-col sm:items-center">
         <input class="search w-3/4 pb-3 outline-none" id="search" type="text" name="" placeholder="Search your city here" />
         <button type="submit" class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer">
           <i class="fas fa-search"></i>
@@ -71,7 +69,6 @@
         </div>
       </div>
     </div>
-
     <script src="script.js"></script>
   </body>
 </html>
