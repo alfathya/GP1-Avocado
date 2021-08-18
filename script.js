@@ -30,31 +30,39 @@ searchButton.addEventListener("click", async () => {
     document.querySelector(
       ".tekanan"
     ).innerHTML = `${weather.main.pressure}hPa`;
-    document.querySelector("#icon").src =
-      "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png";
     inputCity.value = "";
 
     let card = document.getElementById("card");
-    if (weather.weather[0].main === "Clouds") {
-      card.style.backgroundImage = "url('/image/cloud.jpg')";
-    } else if (weather.weather[0].main === "Clear") {
-      card.style.backgroundImage = "url('/image/clear.jpg')";
-    } else if (weather.weather[0].main === "Sunny") {
-      card.style.backgroundImage = "url('/image/sunny.jpg')";
-    } else if (weather.weather[0].main === "Rain") {
-      card.style.backgroundImage = "url('/image/rain.jpg')";
-    } else if (weather.weather[0].main === "Thunderstrom") {
-      card.style.backgroundImage = "url('/image/thunderstrom.jpg')";
-    } else if (weather.weather[0].main === "Mist") {
-      card.style.backgroundImage = "url('/image/mist.jpg')";
-    } else if (weather.weather[0].main === "Haze") {
-      card.style.backgroundImage = "url('/image/haze.jpg')";
-    } else if (weather.weather[0].main === "Sand") {
-      card.style.backgroundImage = "url('/image/sand.jpg')";
-    } else if (weather.weather[0].main === "Snow") {
-      card.style.backgroundImage = "url('/image/snow.jpg')";
-    } else {
-      card.style.backgroundImage = "url('/image/default.jpg')";
+    if(weather.weather[0].main === "Clouds"){
+      card.style.backgroundImage ="url('/image/cloud.jpg')" 
+      document.querySelector("#icon").src = "/image/cloud_icon.svg"
+    }else if(weather.weather[0].main === "Clear"){
+      card.style.backgroundImage ="url('/image/clear.jpg')" 
+      document.querySelector("#icon").src = "/image/clear_icon.svg"
+    }else if(weather.weather[0].main === "Sunny"){
+      card.style.backgroundImage ="url('/image/sunny.jpg')" 
+      document.querySelector("#icon").src = "/image/sunny_icon.svg"
+    }else if(weather.weather[0].main === "Rain"){
+      card.style.backgroundImage ="url('/image/rain.jpg')" 
+      document.querySelector("#icon").src = "/image/rain_icon.svg"
+    }else if(weather.weather[0].main === "Thunderstrom"){
+      card.style.backgroundImage ="url('/image/thunderstrom.jpg')" 
+      document.querySelector("#icon").src = "/image/thunderstrom_icon.svg"
+    }else if(weather.weather[0].main === "Mist"){
+      card.style.backgroundImage ="url('/image/mist.jpg')" 
+      document.querySelector("#icon").src = "/image/mist_icon.svg"
+    }else if(weather.weather[0].main === "Haze"){
+      card.style.backgroundImage ="url('/image/haze.jpg')" 
+      document.querySelector("#icon").src = "/image/haze.svg"
+    }else if(weather.weather[0].main === "Sand"){
+      card.style.backgroundImage ="url('/image/sand.jpg')" 
+      document.querySelector("#icon").src = "/image/sand_icon.svg"
+    }else if(weather.weather[0].main === "Snow"){
+      card.style.backgroundImage ="url('/image/snow.jpg')" 
+      document.querySelector("#icon").src = "/image/snow_icon.svg"
+    }else{
+      card.style.backgroundImage="url('/image/default.jpg')"
+      document.querySelector("#icon").src = "/image/cloud_icon.svg"
     }
 
     const file = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&units=metric&exclude=minutely,alerts&appid=023831ae929ef5ca05e8f9764c820c2e`;
@@ -86,12 +94,27 @@ searchButton.addEventListener("click", async () => {
           document.getElementById("status3").innerHTML = desc3;
           document.getElementById("status4").innerHTML = desc4;
           document.getElementById("status5").innerHTML = desc5;
+
+          let icon1 = data.daily[0].weather[0].icon;
+          let icon2 = data.daily[1].weather[0].icon;
+          let icon3 = data.daily[2].weather[0].icon;
+          let icon4 = data.daily[3].weather[0].icon;
+          let icon5 = data.daily[4].weather[0].icon;
+
+          document.getElementById("icon1").src ="http://openweathermap.org/img/w/" + icon1+ ".png";
+          document.getElementById("icon2").src ="http://openweathermap.org/img/w/" + icon2+ ".png";
+          document.getElementById("icon3").src ="http://openweathermap.org/img/w/" + icon3+ ".png";
+          document.getElementById("icon4").src ="http://openweathermap.org/img/w/" + icon4+ ".png";
+          document.getElementById("icon5").src ="http://openweathermap.org/img/w/" + icon5+ ".png";
+
         });
       return url;
     }
     forecast();
   } catch (err) {
-    alert("kota tidak terdaftar");
+    alert("we're sorry, city your're looking for doesn't exist");
+    const inputCity = document.querySelector(".search");
+    inputCity.value = ""
   }
 });
 
