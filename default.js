@@ -4,8 +4,6 @@ fetch(
   .then((res) => res.json())
   .then((weather) => {
     const suhu = Math.round(weather.main.temp - 273.15);
-    const lat = weather.coord.lat;
-    const lon = weather.coord.lon;
 
     document.querySelector(".derajat").innerHTML = `${suhu} &#8451`;
     document.querySelector(
@@ -25,8 +23,6 @@ fetch(
     document.querySelector("#icon").src =
       "http://openweathermap.org/img/w/" + weather.weather[0].icon + ".png";
     inputCity.value = "";
-
-    forecast();
   });
 
 const file = `https://api.openweathermap.org/data/2.5/onecall?lat=-6.2146&lon=106.8451&units=metric&exclude=minutely,alerts&appid=023831ae929ef5ca05e8f9764c820c2e`;
