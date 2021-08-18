@@ -4,8 +4,6 @@ fetch(
   .then((res) => res.json())
   .then((weather) => {
     const suhu = Math.round(weather.main.temp - 273.15);
-    const lat = weather.coord.lat;
-    const lon = weather.coord.lon;
 
     document.querySelector(".derajat").innerHTML = `${suhu} &#8451`;
     document.querySelector(

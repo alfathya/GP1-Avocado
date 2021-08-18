@@ -10,7 +10,7 @@ const searchButton = document.querySelector(".search-btn");
 searchButton.addEventListener("click", async () => {
   try {
     const inputCity = document.querySelector(".search");
-    //
+
     const weather = await getWeather(inputCity.value);
     const suhu = Math.round(weather.main.temp - 273.15);
     const lat = weather.coord.lat;
