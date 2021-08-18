@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.forecast{
+.forecast {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
@@ -85,208 +85,48 @@
   left: 2rem;
 }
 
-.card2 {
+.countiner {
   display: flex;
-  justify-content: space-between;
-  width: 38rem;
+  justify-content: center;
 }
 
-.forecast {
-  background: rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(5px);
-  min-height: 20vh;
-  width: 6rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border-radius: 3px;
-  position: relative;
-  top: 30px;
-}
-.card3{
-  opacity: 0;
-  position: relative;
-  bottom: 50rem;
-}
 /* disini atur responsive nya */
-/* @media (min-height: 600px) {
-  .status {
-    position: relative;
-    top: 10px;
-  }
-} */
 
-@media (max-width: 984px) {
-  .card2 {
-    width: 29rem;
+@media (max-width: 900px) {
+  .countiner {
+    display: flex;
   }
-}
-@media (max-width: 828px) {
-  .search {
-    width: 12rem;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
-  }
-  .search-btn {
-    position: relative;
-    bottom: 40px;
-    transition: ease-in-out;
-  }
-
-  ::-webkit-input-placeholder {
-    font-size: 12px;
-    position: relative;
-    left: 2.2rem;
-  }
-  .info {
-    font-size: 13px;
-  }
-
-  .info2 {
-    font-size: 13px;
-  }
-}
-
-@media (max-width: 768px) {
-  .derajat {
-    position: relative;
-    bottom: 50px;
-  }
-  .time {
-    position: relative;
-    right: 2px;
-  }
-  .info {
-    font-size: 12px;
-  }
-
-  .info2 {
-    font-size: 12px;
-  }
-  .border {
-    width: 10rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .card {
-    overflow: scroll;
-  }
-  .sidebar {
-    backdrop-filter: blur(0px);
+  .forecast-info {
+    display: flex;
     background: rgba(0, 0, 0, 0.3);
-  }
-  .border {
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    height: 3px;
-    width: 12rem;
-  }
-  .search-btn {
-    width: 0;
-    position: relative;
-    left: 6rem;
-    bottom: 30px;
-  }
-  .infocuaca {
-    padding-bottom: 20px;
-  }
-  .info {
-    position: relative;
-    bottom: 20px;
-  }
-  .info2 {
-    position: relative;
-    bottom: 20px;
-  }
-  .card2 {
-    display: flex;
-    flex-direction: column;
-    margin-top: 20px;
-    border-radius: 3px;
-    width: 23rem;
-    position: relative;
-    top: 20px;
-  }
-  .forecast {
-    display: flex;
-    width: 23rem;
-    height: 4rem;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    min-height: 10vh;
-    backdrop-filter: blur(0px);
-    background: rgba(0, 0, 0, 0.5);
-    position: relative;
-    right: 20px;
-  }
-  .card3{
-    opacity: 0;
-    position: relative;
-    bottom: 50rem;
-  }
-}
-@media (max-width: 640px) {
-  .card2 {
-    opacity: 0;
-    display: flex;
-    position: relative;
-    width: 100%;
-    right: 0px;
-  }
-  .card3 {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    bottom: 25px;
-    padding: 0;
-    opacity: 1;
+    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    width: 85%;
   }
   .forecast {
     background: rgba(0, 0, 0, 0);
-    display: flex;
-    justify-content: space-evenly;
-    width: 20rem;
-    position: relative;
-    right: 0;
+    backdrop-filter: blur(0px);
   }
 }
-@media (max-width: 425px) {
-  .main-page {
-    display: flex;
-    align-items: center;
-    margin-left: -50px;
-  }
-  .time {
-    font-size: 15px;
-  }
-  .date {
-    font-size: 14px;
-  }
-  .name-city {
-    font-size: 15px;
-  }
-  .border {
-    width: 12rem;
-  }
 
-}
-
-@media (max-height: 570px) {
-  .main-page {
-    margin-top: 2rem;
+@media (max-width: 639px) {
+  .countiner {
+    height: 28rem;
   }
-  .time {
-    font-size: 15px;
-  }
-  .date {
-    font-size: 14px;
-  }
-  .name-city {
-    font-size: 15px;
+  .forecast-info{
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
   }
   .sidebar {
-    margin-top: -1rem;
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    min-height: 10vh;
+  }
+  .list{
+    position: relative;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: flex-start;
   }
 }
