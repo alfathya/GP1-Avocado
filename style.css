@@ -12,18 +12,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.waktu,
-.tanggal {
-  color: rgba(255, 255, 255, 0.8);
-}
-/* ini suhu dan nama kota */
-
-.city .citysuhu {
-  color:  rgba(255, 255, 255, 0.8);
-}
-.city .cityname {
-  color:  rgba(255, 255, 255, 0.8);
-}
 /* ini sidebar */
 .sidebar {
   background: rgba(0, 0, 0, 0.1);
