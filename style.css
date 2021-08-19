@@ -1,0 +1,134 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Khula", sans-serif;
+}
+/* ini card body */
+.card {
+  background: url("/image/default.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.forecast {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  border-radius: 15px;
+}
+
+/* ini sidebar */
+.sidebar {
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  color: white;
+}
+/* ini search kolom */
+.search {
+  background: none;
+  border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+  transition: ease-out 0.3s;
+}
+::-webkit-input-placeholder {
+  color: rgb(248, 240, 240);
+  position: relative;
+  left: 2rem;
+  transition: ease-out 0.3s;
+}
+
+.search-btn {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  left: 5rem;
+  bottom: 35px;
+}
+
+.search-btn:hover {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+/* ini sidebar info */
+
+.border {
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  height: 3px;
+  width: 15rem;
+}
+
+.derajat {
+  position: relative;
+  bottom: 25px;
+  color: rgba(255, 255, 255, 0.8);
+}
+.statusText {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.infocuaca {
+  position: relative;
+  top: 30px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.info {
+  position: relative;
+  right: 2rem;
+  transition: ease-in;
+}
+
+.info2 {
+  position: relative;
+  left: 2rem;
+}
+
+.countiner {
+  display: flex;
+  justify-content: center;
+}
+
+/* disini atur responsive nya */
+
+@media (max-width: 900px) {
+  .countiner {
+    display: flex;
+  }
+  .forecast-info {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    width: 85%;
+  }
+  .forecast {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+}
+
+@media (max-width: 639px) {
+  .countiner {
+    height: 28rem;
+  }
+  .forecast-info{
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
+  }
+  .sidebar {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(0px);
+    min-height: 10vh;
+  }
+  .list{
+    position: relative;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: flex-start;
+  }
+}
