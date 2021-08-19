@@ -4,45 +4,27 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script
-      src="https://kit.fontawesome.com/dabea04def.js"
-      crossorigin="anonymous"
-    ></script>
-    <link
-      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
-      rel="stylesheet"
-    />
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <script src="https://kit.fontawesome.com/dabea04def.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
     <title>weather web</title>
   </head>
   <body>
-    <div
-      id="card"
-      class="card h-screen w-screen flex justify-between items-stretch flex-row"
-    >
-      <div class="main-page w-full h-full flex justify-center flex-col">
+    <div id="card" class="card h-full flex flex-col justify-between items-center sm:h-screen sm:w-screen sm:flex sm:justify-between sm:items-stretch sm:flex-row">
+      <div class="main-page w-full sm:w-9/12 h-full flex justify-center flex-col">
         <!-- ini info pada main -->
-        <div
-          class="
-            w-full
-            h-3/5
-            flex flex-row
-            justify-between
-            items-end
-            pl-16
-            pb-10
-          "
-        >
+        <div class="list w-9/12 h-3/5 flex flex-row justify-between items-end pl-16 pb-10">
           <div class="list-city flex flex-col text-white">
             <!-- tempat dan waktu -->
-            <span class="name-city text-5xl">---</span>
-            <div class="time text-6xl">
+            <span class="name-city md:text-4x1 lg:text-5xl">---</span>
+            <div class=" text-4x1 md:text-5xl lg:text-6xl">
               <span id="hours"></span> : <span id="minutes"></span> :
               <span id="seconds"></span>
               <span id="periode"></span>
             </div>
             <!-- hari dan tanggal -->
-            <div class="date text-4xl" id="date-list">
+            <div class="date md:text-3x1 lg:text-4xl" id="date-list">
               <span id="dayname"></span>
               <span id="date"></span>
               <span id="months"></span>
@@ -50,113 +32,74 @@
             </div>
           </div>
         </div>
-        <div
-          class="
-            forecast-info
-            h-2/6
-            w-full
-            rounded-2xl
-            flex
-            justify-around
-            text-white
-          "
-        >
-          <div class="forecast w-1/6 h-4/5 flex flex-col items-center">
-            <h3 id="timeNow " class="m-5 text-2xl border-b-4 pb-3">Mon</h3>
-            <h4 id="day1" class="text-3xl mb-5">0ºC</h4>
-            <img id="icon1" src="" alt="" />
-            <h5 id="status1" class="statusForecast text-2xl">--</h5>
-          </div>
-          <div class="forecast w-1/6 h-4/5 flex flex-col items-center">
-            <h3 id="time1" class="m-5 text-2xl border-b-4 pb-3">Tue</h3>
-            <h4 id="day2" class="text-3xl mb-5">0ºC</h4>
-            <img id="icon2" src="" alt="" />
-            <h5 id="status2" class="text-2xl">--</h5>
-          </div>
-          <div class="forecast w-1/6 h-4/5 flex flex-col items-center">
-            <h3 id="time2" class="m-5 text-2xl border-b-4 pb-3">Wed</h3>
-            <h4 id="day3" class="text-3xl mb-5">0ºC</h4>
-            <img id="icon3" src="" alt="" />
-            <h5 id="status3" class="statusForecast text-2xl">--</h5>
-          </div>
-          <div class="forecast w-1/6 h-4/5 flex flex-col items-center">
-            <h3 id="time3" class="m-5 text-2xl border-b-4 pb-3">Thu</h3>
-            <h4 id="day4" class="text-3xl mb-5">0ºC</h4>
-            <img id="icon4" src="" alt="" />
-            <h5 id="status4" class="statusForecast text-2xl">--</h5>
-          </div>
-          <div class="forecast w-1/6 h-4/5 flex flex-col items-center">
-            <h3 id="time4" class="m-5 text-3xl border-b-4 pb-3">Fri</h3>
-            <h4 id="day5" class="text-3xl mb-5">0ºC</h4>
-            <img id="icon5" src="" alt="" />
-            <h5 id="status5" class="statusForecast text-2xl">--</h5>
+        <div class="countiner">
+          <div class="forecast-info h-2/6 w-full h-full rounded-2xl flex justify-around text-white">
+            <div class="forecast w-1/6 h-full flex flex-col items-center">
+              <h3 id="timeNow " class="m-5 text-base lg:text-2xl border-b-4 pb-3">Mon</h3>
+              <h4 id="day1" class="text-2x1 lg:text-3xl mb-5">0ºC</h4>
+              <img id="icon1" src="" alt="" />
+              <h5 id="status1" class="statusForecast text-2xl">--</h5>
+            </div>
+            <div class="forecast w-1/6 h-full flex flex-col items-center">
+              <h3 id="time1" class="m-5 text-base lg:text-2xl border-b-4 pb-3">Tue</h3>
+              <h4 id="day2" class=" text-2x1 lg:text-3xl mb-5">0ºC</h4>
+              <img id="icon2" src="" alt="" />
+              <h5 id="status2" class="text-2xl">--</h5>
+            </div>
+            <div class="forecast w-1/6 h-full flex flex-col items-center">
+              <h3 id="time2" class="m-5 text-base lg:text-2xl border-b-4 pb-3">Wed</h3>
+              <h4 id="day3" class="text-2x1 lg:text-3xl mb-5">0ºC</h4>
+              <img id="icon3" src="" alt="" />
+              <h5 id="status3" class="statusForecast text-2xl">--</h5>
+            </div>
+            <div class="forecast w-1/6 h-full flex flex-col items-center">
+              <h3 id="time3" class="m-5 text-base lg:text-2xl border-b-4 pb-3">Thu</h3>
+              <h4 id="day4" class="text-2x1 lg:text-3xl mb-5">0ºC</h4>
+              <img id="icon4" src="" alt="" />
+              <h5 id="status4" class="statusForecast text-2xl">--</h5>
+            </div>
+            <div class="forecast w-1/6 h-full flex flex-col items-center">
+              <h3 id="time4" class="m-5 text-base lg:text-2xl border-b-4 pb-3">Fri</h3>
+              <h4 id="day5" class="text-2x1 lg:text-3xl mb-5">0ºC</h4>
+              <img id="icon5" src="" alt="" />
+              <h5 id="status5" class="statusForecast text-2xl">--</h5>
+            </div>
           </div>
         </div>
-      </div>
+      
 
       <!-- ini side bar  -->
 
-      <div
-        class="
-          sidebar
-          w-4/12
-          pt-8
-          h-screen
-          flex
-          justify-start
-          rounded-sm
-          flex-col
-          items-center
-        "
-      >
-        <input
-          class="search w-3/4 pb-3 outline-none"
-          id="search"
-          type="text"
-          name=""
-          placeholder="Search your city here"
-        />
-        <button
-          type="submit"
-          class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer"
-        >
+      <div class="sidebar w-full sm:w-4/12 pt-8 h-screen flex justify-start rounded-sm flex-col items-center">
+        <input class="search w-3/4 pb-3 outline-none" id="search" type="text" name="" placeholder="Search your city here" />
+        <button type="submit" class="search-btn bg-none border-none absolute w-5 z-1 cursor-pointer">
           <i class="fas fa-search"></i>
         </button>
 
         <!-- ini side bar status cuaca -->
 
-        <div
-          class="
-            status
-            w-full
-            h-3/6
-            text-center
-            flex flex-col
-            justify-center
-            items-center
-          "
-        >
+        <div class="status w-full h-3/6 text-center flex flex-col justify-center items-center">
           <h1 class="derajat mt-5 text-6xl font-bold">0ºC</h1>
-          <img class="w-1/2 h-1/2 p-5" src="" id="icon" alt="Icon">
+          <img class="w-1/2 h-1/2 p-5" src="" id="icon" alt="Icon" />
           <h2 class="statusText text-6xl font-bold">--</h2>
         </div>
 
         <!-- ini sidebar info cuaca -->
 
-        <div class="infocuaca flex text-xl pt-8 lg:text-lg">
+        <div class="infocuaca flex pt-8 text-sm md:text-base lg:text-lg">
           <ul class="info">
             <!-- <li class="temperature">Temperature</li> -->
-            <li class="humadity md:text-base lg:text-lg">Humadity</li>
-            <li class="wind md:text-base lg:text-lg">Wind Speed</li>
-            <li class="visibility md:text-base lg:text-lg">Visibility</li>
-            <li class="pressure md:text-base lg:text-lg">Pressure</li>
+            <li class="humadity text-sm md:text-base lg:text-base">Humadity</li>
+            <li class="wind lg:text-lg">Wind Speed</li>
+            <li class="visibility lg:text-lg">Visibility</li>
+            <li class="pressure lg:text-lg">Pressure</li>
           </ul>
           <ul class="info2">
             <!-- <li class="derajat">0ºC</li> -->
-            <li class="kelembapan md:text-base lg:text-lg">0%</li>
-            <li class="angin md:text-base lg:text-lg">0km/h</li>
-            <li class="jarakpandang md:text-base lg:text-lg">0km</li>
-            <li class="tekanan md:text-base lg:text-lg">0hPa</li>
+            <li class="kelembapan lg:text-lg">0%</li>
+            <li class="angin lg:text-lg">0km/h</li>
+            <li class="jarakpandang lg:text-lg">0km</li>
+            <li class="tekanan lg:text-lg">0hPa</li>
           </ul>
         </div>
       </div>

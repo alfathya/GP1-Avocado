@@ -12,7 +12,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.forecast{
+.forecast {
   background: rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
 }
@@ -62,10 +62,10 @@
 .derajat {
   position: relative;
   bottom: 25px;
-  color : rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
-.statusText{
-  color : rgba(255, 255, 255, 0.8);
+.statusText {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .infocuaca {
@@ -84,129 +84,49 @@
   position: relative;
   left: 2rem;
 }
+
+.countiner {
+  display: flex;
+  justify-content: center;
+}
+
 /* disini atur responsive nya */
-/* @media (min-height: 600px) {
-  .status {
-    position: relative;
-    top: 10px;
-  }
-} */
 
-
-@media (max-width: 828px) {
-  .search {
-    width: 12rem;
-    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+@media (max-width: 900px) {
+  .countiner {
+    display: flex;
   }
-  .search-btn {
-    position: relative;
-    bottom: 40px;
-    transition: ease-in-out;
+  .forecast-info {
+    display: flex;
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    width: 85%;
   }
-
-  ::-webkit-input-placeholder {
-    font-size: 12px;
-    position: relative;
-    left: 2.2rem;
-  }
-  .info {
-    font-size: 13px;
-  }
-
-  .info2 {
-    font-size: 13px;
+  .forecast {
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
   }
 }
 
-@media (max-width: 768px) {
-  .derajat {
-    position: relative;
-    bottom: 50px;
+@media (max-width: 639px) {
+  .countiner {
+    height: 28rem;
   }
-  .time {
-    position: relative;
-    right: 2px;
-  }
-  .info {
-    font-size: 12px;
-  }
-
-  .info2 {
-    font-size: 12px;
-  }
-  .border {
-    width: 10rem;
-  };
-}
-
-@media (max-width: 625px) {
-  .card {
-    overflow: scroll;
+  .forecast-info{
+    background: rgba(0, 0, 0, 0);
+    backdrop-filter: blur(0px);
   }
   .sidebar {
+    background: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(0px);
-    background: rgba(0, 0, 0, 0.3);
+    min-height: 10vh;
   }
-  .border {
-    background: rgba(255, 255, 255, 0.3);
-    border: none;
-    height: 3px;
-    width: 12rem;
-  }
-  .search-btn {
-    width: 0;
+  .list{
     position: relative;
-    left: 6rem;
-    bottom: 30px;
-  }
-  .infocuaca{
-    padding-bottom: 20px;
-  }
-  .info{
-    position: relative;
-    bottom: 20px;
-  }
-  .info2{
-    position: relative;
-    bottom: 20px;
-  }
-}
-
-@media (max-width: 425px) {
-  .main-page {
-   display: flex;
-   align-items: center;
-   margin-left: -50px;
-  }
-  .time {
-    font-size: 15px;
-  }
-  .date {
-    font-size: 14px;
-  }
-  .name-city{
-    font-size: 15px;
-  }
-  .border{
-    width: 12rem;
-  }
-}
-
-
-@media (max-height:570px){
-  .main-page{
-    margin-top: 2rem;
-  }
-  .time {
-    font-size: 15px;
-  }
-  .date {
-    font-size: 14px;
-  }
-  .name-city{
-    font-size: 15px;
-  }
-  .sidebar{
-    margin-top: -1rem;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    justify-content: flex-start;
   }
 }
